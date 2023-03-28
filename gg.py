@@ -50,7 +50,7 @@ def main_game():
             else:
                 print("Número inválido")
         else:
-            print("Entrada inválida\n\n\n")
+            print("Entrada inválida\n\n")
     
     again = input("\n\nJogar novamente? (S/N) ")
     if again.lower() == 's':
