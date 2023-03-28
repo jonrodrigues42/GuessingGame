@@ -1,13 +1,27 @@
 import random as rd
 
-min = 0
-max = 10
-
-
-
-def main_game(min, max):
-    attemps = 1
+def main_game():
     win = False
+    attemps = 1
+    min = 0
+
+    dif = int(input(""""Escolha a dificuldade\n
+        0 = Easy (0 - 10)
+        1 = Normal (0 - 20)
+        2 = Hard (0 - 50)
+        3 = Insane (0 - 100)\n
+    """))
+    if dif == 0:
+        max = 10
+    elif dif == 1:
+        max = 20
+    elif dif == 2:
+        max = 50
+    elif dif == 3:
+        max = 100
+    else:
+        print("Difculdade inválida")
+        main_game()
 
     print(f"Será sorteado um número de {min} a {max}. Você consegue acertar?")
     print("---------------------------------\n\n")
@@ -29,10 +43,10 @@ def main_game(min, max):
         else:
             print("Número inválido")
     
-
-main_game(min, max)
-again = input("Jogar novamente? (S/N) ")
-if again.lower() == 's':
-    main_game(min, max)
-else:
-    print("Até mais!")
+    again = input("Jogar novamente? (S/N) ")
+    if again.lower() == 's':
+        main_game()
+    else:
+        print("Até mais!")
+    
+main_game()
