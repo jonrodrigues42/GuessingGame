@@ -7,20 +7,20 @@ def main_game():
 
     difin = (input(""""Escolha a dificuldade\n
         0 = Easy (0 - 10)
-        1 = Normal (0 - 20)
-        2 = Hard (0 - 50)
-        3 = Insane (0 - 100)\n"""))
+        1 = Normal (0 - 50)
+        2 = Hard (0 - 100)
+        3 = Insane (0 - 1000)\n"""))
     
     if difin.isdigit():
         dif = int(difin)
         if dif == 0:
             max = 10
         elif dif == 1:
-            max = 20
-        elif dif == 2:
             max = 50
-        elif dif == 3:
+        elif dif == 2:
             max = 100
+        elif dif == 3:
+            max = 1000
         else:
             print("Difculdade inválida\n\n\n")
             main_game()
