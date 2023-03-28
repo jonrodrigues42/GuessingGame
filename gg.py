@@ -9,8 +9,8 @@ def main_game():
         0 = Easy (0 - 10)
         1 = Normal (0 - 20)
         2 = Hard (0 - 50)
-        3 = Insane (0 - 100)\n
-    """))
+        3 = Insane (0 - 100)\n"""))
+    
     if dif == 0:
         max = 10
     elif dif == 1:
@@ -24,15 +24,15 @@ def main_game():
         main_game()
 
     print(f"Será sorteado um número de {min} a {max}. Você consegue acertar?")
-    print("---------------------------------\n\n")
+    print("---------------------------------\n")
     generated_number = rd.randint(min, max)
 
     while not win:
-        usern = int(input("Qual é o número? "))
+        usern = int(input("\nQual é o número? "))
         if (usern >= min) and (usern <= max):
             if generated_number == usern:
-                print("Parabéns, você ganhou!")
-                print(f"Você acertou o número '{generated_number}' em {attemps} tentativas.")
+                print("\nParabéns, você ganhou!")
+                print(f"Você acertou o número '{generated_number}' em {attemps} tentativas.\n")
                 win = True
             elif generated_number < usern:
                 print("Ainda não, o número é MENOR")
@@ -43,7 +43,7 @@ def main_game():
         else:
             print("Número inválido")
     
-    again = input("Jogar novamente? (S/N) ")
+    again = input("\n\nJogar novamente? (S/N) ")
     if again.lower() == 's':
         main_game()
     else:
