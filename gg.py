@@ -9,7 +9,8 @@ def main_game():
         0 = Easy (0 - 10)
         1 = Normal (0 - 50)
         2 = Hard (0 - 100)
-        3 = Insane (0 - 1000)\n"""))
+        3 = Insane (0 - 1.000)
+        6 = Doom Slayer (0 - 100.000)\n"""))
     
     if difin.isdigit():
         dif = int(difin)
@@ -21,6 +22,8 @@ def main_game():
             max = 100
         elif dif == 3:
             max = 1000
+        elif dif == 6:
+            max = 100000
         else:
             print("Difculdade inválida\n\n\n")
             main_game()
