@@ -42,10 +42,10 @@ def main_game():
                     print(f"Você acertou o número '{generated_number}' em {attemps} tentativas.\n")
                     win = True
                 elif generated_number < usern:
-                    print("Ainda não, o número é MENOR")
+                    print("Ainda não, o número é << MENOR <<")
                     attemps += 1
                 elif generated_number > usern:
-                    print("Ainda não, o número é MAIOR")
+                    print("Ainda não, o número é >> MAIOR >>")
                     attemps += 1
             else:
                 print("Número inválido")
